@@ -28,19 +28,18 @@
 				Une société de gestion aéroportuaire souhaite améliorer son logiciel de gestion des vols pour optimiser ses opérations. Actuellement leur système ne permet pas une gestion efficace des informations liées aux vols, aux compagnies, aux passagers et aux avions. Par conséquent, ils ont décidé de concevoir un nouveau système basé sur un modèle de données plus performant.
 				<br>
 				<br>
-				Le logiciel de gestion aéroportuaire doit prendre en compte les éléments essentiels
+				Le logiciel de gestion aéroportuaire doit prendre en compte les éléments essentiels de l'activité aéroportuaire. Le système permettra de stocker les informations clés de chaque vol (numéro de vol, ville de départ, destination, date de décollage et d'atterrissage, ainsi que le nombre de passagers prévus.)
 				<br>
 				<br>
-
+				Il permettra aussi de gérer les compagnies aériennes partenaires. Chaque compagnie étant identifiée par son nom et un numéro unique.
 				<br>
 				<br>
-
+				La société veut également recueillir les informations sur les différents avions utilisés par les compagnies, à savoir le type d'avion ainsi que son immatriculation.
 				<br>
 				<br>
-
+				La société vous confie la tâche de réaliser le MCD et le MLD de leur nouveau logiciel. Vous devrez prendre en compte les relations entre les différentes tables et spécifier les contraintes nécessaires pour garantir l'intégrité des données
 				<br>
 				<br>
-
 			</div>
 		</div>
 		
@@ -50,14 +49,35 @@
 			<br/>
 			<div id="hidden1" style="display: none">
 				<h3>MCD</h3>
-
+				<ul>
+					<li>Une Compagnie peut avoir plusieurs Avions, mais chaque Avion appartient à une seule Compagnie. (1:N)</li>
+					<li>Une Compagnie peut opérer plusieurs Vols, mais chaque Vol est associé à une seule Compagnie. (1:N)</li>
+					<li>Un Vol peut avoir plusieurs Passagers, mais chaque Passager peut être associé à plusieurs Vols. (M:N)</li>
+					<li>Chaque Voyage relie un Passager à un Vol spécifique. (1:1)</li>
+					<li>Chaque Voyage est lié à un seul Passager et à un seul Vol. (1:1)</li>
+				</ul>
+					<img src="../ressources/imgs/mcd1.PNG">
 				<h3>MLD</h3>
+					<img src="../ressources/imgs/mld1.png">
 			</div>
 		</div>
 		
 		<div class="exercices">
 			<div class="ex2">
 				<h2 class="title">Exercice 2 - Production de satellites</h2>
+				
+				Le centre Spatial National, en collaboration avc plusieurs agences spatiales internationales, souhaite développer une base de données avancée pour centraliser les informations détaillées sur la construction des satellites à travers le monde. 
+				<br>
+				<br>
+				Chaque satellite est identifié par un code unique et possède un nom qui lui est propre. La conception du satellite est déterminée par sa catégorie, qui peut inclure des types tels que <em>Télécommunications, Recherche Scientifique, Observation, etc.</em>.
+				Chaque catégorie a ses propres spécifications techniques, notamment la masse, la puissance, la durée de vie en orbite et d'autres caractéristiques propres à la mission. 
+				<br>
+				<br>
+				Outre les caractéristiques techniques, la base de données devra également stocker des informations sur les pays participants au programme de construction du satellite, ainsi que les pays qui ont commandé le satellite.
+				Chaque commande de satellite comprend des détails tels que la date de commande, la date de livraison prévue et éventuellement la date de mise en service effective.
+				<br>
+				<br>
+				Il convient de noter que certains pays, bien qu'ils ne participent pas directement au programme de construction, peuvent acheter des satellites développés par d'autres pays. Il est donc essentiel de prendre en compte ces transactions et suivre les détails relatifs aux acheteurs et vendeurs de satellites.
 			</div>
 		</div>
 		
@@ -66,7 +86,10 @@
 			<button onclick="seeCorrection(2)" id="ex2">Voir la correction</button>
 			<br/>
 			<div id="hidden2" style="display: none">
-				Test
+				<h3>MCD</h3>
+					<img src="../ressources/imgs/mcd2.PNG">
+				<h3>MLD</h3>
+					<img src="../ressources/imgs/mld2.png">
 			</div>
 		</div>
 		
@@ -74,7 +97,7 @@
 			<hr>
 			<ul class="footer_list">
 				<li id="details">TIn 311 - Initiation aux bases de données</li>
-				<li id="td_nb">TD #</li>
+				<li id="td_nb">TD 1</li>
 			</ul>
 		</div>
 		
