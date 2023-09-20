@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="360" height="523" viewBox="0 0 360 523" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="360" height="523" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association Utilise -->
+<g>
+	<line x1="196" y1="43" x2="54" y2="127" stroke="#e08214" stroke-width="2"/>
+	<text x="149" y="51.42" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="196" y1="211" x2="54" y2="127" stroke="#e08214" stroke-width="2"/>
+	<text x="139" y="205.67" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M66 102 a14 14 90 0 1 14 14 V127 h-52 V116 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M80 127 v11 a14 14 90 0 1 -14 14 H42 a14 14 90 0 1 -14 -14 V127 H52" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="28" y="102" width="52" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="28" y1="127" x2="80" y2="127" stroke="#e08214" stroke-width="1"/>
+		<text x="35" y="119.75" fill="#000" font-family="Verdana" font-size="12">Utilise</text>
+	</g>
+</g>
+
+<!-- Association Commande/Achete -->
+<g>
+	<line x1="196" y1="43" x2="196" y2="127" stroke="#e08214" stroke-width="2"/>
+	<text x="201" y="94" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="196" y1="211" x2="196" y2="127" stroke="#e08214" stroke-width="2"/>
+	<text x="201" y="169" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M247 102 a14 14 90 0 1 14 14 V127 h-130 V116 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M261 127 v11 a14 14 90 0 1 -14 14 H145 a14 14 90 0 1 -14 -14 V127 H130" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="131" y="102" width="130" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="131" y1="127" x2="261" y2="127" stroke="#e08214" stroke-width="1"/>
+		<text x="138" y="119.75" fill="#000" font-family="Verdana" font-size="12">Commande/Achete</text>
+	</g>
+</g>
+
+<!-- Association Produit -->
+<g>
+	<line x1="196" y1="43" x2="322" y2="127" stroke="#e08214" stroke-width="2"/>
+	<text x="221" y="53.44" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="196" y1="211" x2="322" y2="127" stroke="#e08214" stroke-width="2"/>
+	<text x="231" y="202.89" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M337 102 a14 14 90 0 1 14 14 V127 h-58 V116 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M351 127 v11 a14 14 90 0 1 -14 14 H307 a14 14 90 0 1 -14 -14 V127 H58" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="293" y="102" width="58" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="293" y1="127" x2="351" y2="127" stroke="#e08214" stroke-width="1"/>
+		<text x="300" y="119.75" fill="#000" font-family="Verdana" font-size="12">Produit</text>
+	</g>
+</g>
+
+<!-- Association Appartient -->
+<g>
+	<line x1="196" y1="211" x2="196" y2="295" stroke="#e08214" stroke-width="2"/>
+	<text x="201" y="262" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="196" y1="396" x2="196" y2="295" stroke="#e08214" stroke-width="2"/>
+	<text x="201" y="337" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M221 270 a14 14 90 0 1 14 14 V295 h-78 V284 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M235 295 v11 a14 14 90 0 1 -14 14 H171 a14 14 90 0 1 -14 -14 V295 H78" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="157" y="270" width="78" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="157" y1="295" x2="235" y2="295" stroke="#e08214" stroke-width="1"/>
+		<text x="164" y="287.75" fill="#000" font-family="Verdana" font-size="12">Appartient</text>
+	</g>
+</g>
+
+<!-- Association Utiliser pour -->
+<g>
+	<line x1="196" y1="396" x2="54" y2="396" stroke="#e08214" stroke-width="2"/>
+	<text x="104" y="413" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="54" y1="480" x2="54" y2="396" stroke="#e08214" stroke-width="2"/>
+	<text x="59" y="438" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M85 371 a14 14 90 0 1 14 14 V396 h-90 V385 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M99 396 v11 a14 14 90 0 1 -14 14 H23 a14 14 90 0 1 -14 -14 V396 H90" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="9" y="371" width="90" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="9" y1="396" x2="99" y2="396" stroke="#e08214" stroke-width="1"/>
+		<text x="17" y="388.75" fill="#000" font-family="Verdana" font-size="12">Utiliser pour</text>
+	</g>
+</g>
+
+<!-- Entity Pays -->
+<g>
+	<g>
+		<rect x="176" y="9" width="40" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="176" y="34" width="40" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="176" y="9" width="40" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="176" y1="34" x2="216" y2="34" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="182" y="26.75" fill="#000" font-family="Verdana" font-size="12">Pays</text>
+	<text x="181" y="51.8" fill="#000" font-family="Verdana" font-size="12">ID</text>
+	<line x1="181" y1="54" x2="196" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="181" y="68.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+</g>
+
+<!-- Entity Satellite -->
+<g>
+	<g>
+		<rect x="166" y="177" width="60" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="166" y="202" width="60" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="166" y="177" width="60" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="166" y1="202" x2="226" y2="202" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="171" y="194.75" fill="#000" font-family="Verdana" font-size="12">Satellite</text>
+	<text x="171" y="219.8" fill="#000" font-family="Verdana" font-size="12">NORAD</text>
+	<line x1="171" y1="222" x2="216" y2="222" stroke="#000" stroke-width="1"/>
+	<text x="171" y="236.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+</g>
+
+<!-- Entity Categorie -->
+<g>
+	<g>
+		<rect x="131" y="345" width="130" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="131" y="370" width="130" height="77" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="131" y="345" width="130" height="102" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="131" y1="370" x2="261" y2="370" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="167" y="362.75" fill="#000" font-family="Verdana" font-size="12">Categorie</text>
+	<text x="136" y="387.8" fill="#000" font-family="Verdana" font-size="12">ID</text>
+	<line x1="136" y1="390" x2="151" y2="390" stroke="#000" stroke-width="1"/>
+	<text x="136" y="404.8" fill="#000" font-family="Verdana" font-size="12">Gamme_masse</text>
+	<text x="136" y="421.8" fill="#000" font-family="Verdana" font-size="12">Gamme_Puissance</text>
+	<text x="136" y="438.8" fill="#000" font-family="Verdana" font-size="12">Gamme_Duree_VIe</text>
+</g>
+
+<!-- Entity Type -->
+<g>
+	<g>
+		<rect x="14" y="446" width="80" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="14" y="471" width="80" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="14" y="446" width="80" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="14" y1="471" x2="94" y2="471" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="39" y="463.75" fill="#000" font-family="Verdana" font-size="12">Type</text>
+	<text x="19" y="488.8" fill="#000" font-family="Verdana" font-size="12">ID</text>
+	<line x1="19" y1="491" x2="34" y2="491" stroke="#000" stroke-width="1"/>
+	<text x="19" y="505.8" fill="#000" font-family="Verdana" font-size="12">Description</text>
+</g>
+</svg>

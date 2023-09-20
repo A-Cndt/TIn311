@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>TIn 311 - TD 1</title>
+		<meta charset="utf-8">
+		<meta lang="fr-FR">
+		<link rel="stylesheet" href="../ressources/css/td.css">
+		<script src="../ressources/js/td.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		<div class="header">
+			<hr>
+			<h1 class="title">TD 2 - Réalisation de MCD & MLD - 2</h1>
+			<p class="details">TIn 311 - Initiation aux bases de données</p>
+			<p class="author">Alexandre CONDETTE - <a class="email" href="mailto:alexandre.condette@cnes.fr">alexandre.condette@cnes.fr</a></p>
+			<p class="year">2023 - 2024</p>
+			<img class="logo_ipsa" src="../ressources/imgs/logo_ipsa.png">
+			<hr>
+		</div>
+		
+		<div class="exercices">
+			<div class="ex1">
+				<h2 class="title">Exercice 1 : Réseau Mobile</h2>
+				
+				Une entreprise de télécommunications souhaite concevoir une base de données pour gérer son réseau mobile.
+				<br/>
+				<br/>
+				Le réseau mobile est composé de plusieurs éléments, notamment des stations, des abonnées, des appels, des messages.
+				<br/>
+				Les stations sont réparties dans différentes régions géographiques. Chaque abonné possède un numéro de téléphone unique et peut effectuer des appel, envoyer des messages avec son forfait.
+				<br/>
+				<br/>
+				Les stations enregistrent les informations sur les appels passés. Chaque appel peut-être entrant ou sortant et a une durée associée.
+				<br/>
+				Les messages texte sont également enregistrés avec l'expéditeur, le destinataire et le contenu du message.
+				<br/>
+				<br/>
+				Les abonnées ont des forfaits qui définissent leur allocation de temps d'appel, de messages. Les abonnées ont également la possibilité de changer de forfait.
+				<br/>
+				<br/>
+				Créez le MCD et le MLD pour représenter la gestion de ce réseau.
+			</div>
+		</div>
+		
+		<div class="correction">
+			<h2 class="solve">Correction</h2>
+			<button onclick="seeCorrection(1)" id="ex1">Voir la correction</button>
+			<br/>
+			<div id="hidden1" style="display: none">
+				Entités :
+Station de base
+Identifiant de station (Clé primaire)
+Nom de la station
+Emplacement géographique
+...
+Abonné
+Numéro de téléphone (Clé primaire)
+Nom
+Adresse
+Forfait actuel (Clé étrangère vers l'entité Forfait)
+...
+Forfait
+Identifiant de forfait (Clé primaire)
+Minutes d'appel incluses
+Messages texte inclus
+Données incluses
+Coût mensuel
+...
+Appel
+Identifiant d'appel (Clé primaire)
+Abonné appelant (Clé étrangère vers l'entité Abonné)
+Abonné appelé (Clé étrangère vers l'entité Abonné)
+Durée de l'appel
+Type d'appel (entrant/sortant)
+...
+Message texte
+Identifiant de message (Clé primaire)
+Expéditeur (Clé étrangère vers l'entité Abonné)
+Destinataire (Clé étrangère vers l'entité Abonné)
+Contenu du message
+Date et heure d'envoi
+...
+Une station de base peut desservir plusieurs abonnés, mais un abonné est desservi par une seule station de base (relation 1 à N entre Station de base et Abonné).
+Un abonné est associé à un seul forfait, mais un forfait peut être associé à plusieurs abonnés (relation 1 à N entre Abonné et Forfait).
+Un appel est effectué par un abonné appelant et est reçu par un abonné appelé (relation N à N entre Abonné et Appel).
+Un message texte est envoyé par un expéditeur à un destinataire (relation N à N entre Abonné et Message texte).
+
+			</div>
+		</div>
+		
+		<div class="exercices">
+			<div class="ex2">
+				<h2 class="title">Exercice 2 : Modules informatiques</h2>
+
+				On souhaite modéliser l'agencement de différents projets informatiques libres écrits en python. Le code de ces projets se compose de différents modules (ex Numpy, Astropy, etc.) nécessaire à son fonctionnement. La plupart des projets utilisent au moins un module.
+				<br/>
+				Un module est une collection de fichiers sources, qui possède un nom, une version, et peut lui-même dépendre de plusieurs autres modules (dépendance).
+				<br/>
+				<br/>
+				Chaque module et chaque projet et publié sous les termes d'une licence (ex. Licence MIT) permettant une utilisation plus ou moins libre. On souhaite représenter dans la base toutes les données relatives à ces licences.
+			</div>
+		</div>
+		
+		<div class="correction">
+			<h2 class="solve">Correction</h2>
+			<button onclick="seeCorrection(2)" id="ex2">Voir la correction</button>
+			<br/>
+			<div id="hidden2" style="display: none">
+				Test
+			</div>
+		</div>
+		
+		<div class="footer">
+			<hr>
+			<ul class="footer_list">
+				<li id="details">TIn 311 - Initiation aux bases de données</li>
+				<li id="td_nb">TD 2</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

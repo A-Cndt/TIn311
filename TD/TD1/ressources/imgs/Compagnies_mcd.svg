@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="381" height="340" viewBox="0 0 381 340" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="381" height="340" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association Opere -->
+<g>
+	<line x1="200" y1="136" x2="68" y2="136" stroke="#e08214" stroke-width="2"/>
+	<text x="119" y="153" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="68" y1="263" x2="68" y2="136" stroke="#e08214" stroke-width="2"/>
+	<text x="73" y="187" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<g>
+		<path d="M80 111 a14 14 90 0 1 14 14 V136 h-52 V125 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M94 136 v11 a14 14 90 0 1 -14 14 H56 a14 14 90 0 1 -14 -14 V136 H52" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="42" y="111" width="52" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="42" y1="136" x2="94" y2="136" stroke="#e08214" stroke-width="1"/>
+		<text x="50" y="128.75" fill="#000" font-family="Verdana" font-size="12">Opere</text>
+	</g>
+</g>
+
+<!-- Association Possede -->
+<g>
+	<line x1="318" y1="43" x2="318" y2="136" stroke="#e08214" stroke-width="2"/>
+	<text x="323" y="94" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="200" y1="136" x2="318" y2="136" stroke="#e08214" stroke-width="2"/>
+	<text x="259" y="153" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M336 111 a14 14 90 0 1 14 14 V136 h-64 V125 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M350 136 v11 a14 14 90 0 1 -14 14 H300 a14 14 90 0 1 -14 -14 V136 H64" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="286" y="111" width="64" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="286" y1="136" x2="350" y2="136" stroke="#e08214" stroke-width="1"/>
+		<text x="293" y="128.75" fill="#000" font-family="Verdana" font-size="12">Possede</text>
+	</g>
+</g>
+
+<!-- Association Embarquer -->
+<g>
+	<line x1="68" y1="263" x2="200" y2="263" stroke="#e08214" stroke-width="2"/>
+	<text x="132" y="280" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="318" y1="263" x2="200" y2="263" stroke="#e08214" stroke-width="2"/>
+	<text x="258" y="280" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M227 238 a14 14 90 0 1 14 14 V263 h-82 V252 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M241 263 v11 a14 14 90 0 1 -14 14 H173 a14 14 90 0 1 -14 -14 V263 H82" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="159" y="238" width="82" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="159" y1="263" x2="241" y2="263" stroke="#e08214" stroke-width="1"/>
+		<text x="167" y="255.75" fill="#000" font-family="Verdana" font-size="12">Embarquer</text>
+	</g>
+</g>
+
+<!-- Entity Avion -->
+<g>
+	<g>
+		<rect x="264" y="9" width="108" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="264" y="34" width="108" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="264" y="9" width="108" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="264" y1="34" x2="372" y2="34" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="301" y="26.75" fill="#000" font-family="Verdana" font-size="12">Avion</text>
+	<text x="269" y="51.8" fill="#000" font-family="Verdana" font-size="12">Immatriculation</text>
+	<line x1="269" y1="54" x2="366" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="269" y="68.8" fill="#000" font-family="Verdana" font-size="12">Type</text>
+</g>
+
+<!-- Entity Compagnie -->
+<g>
+	<g>
+		<rect x="146" y="102" width="108" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="146" y="127" width="108" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="146" y="102" width="108" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="146" y1="127" x2="254" y2="127" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="166" y="119.75" fill="#000" font-family="Verdana" font-size="12">Compagnie</text>
+	<text x="151" y="144.8" fill="#000" font-family="Verdana" font-size="12">Numero_unique</text>
+	<line x1="151" y1="147" x2="248" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="151" y="161.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+</g>
+
+<!-- Entity Vol -->
+<g>
+	<g>
+		<rect x="9" y="195" width="118" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="9" y="220" width="118" height="111" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="9" y="195" width="118" height="136" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="9" y1="220" x2="127" y2="220" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="58" y="212.75" fill="#000" font-family="Verdana" font-size="12">Vol</text>
+	<text x="14" y="237.8" fill="#000" font-family="Verdana" font-size="12">N°Vol</text>
+	<line x1="14" y1="240" x2="49" y2="240" stroke="#000" stroke-width="1"/>
+	<text x="14" y="254.8" fill="#000" font-family="Verdana" font-size="12">Ville_depart</text>
+	<text x="14" y="271.8" fill="#000" font-family="Verdana" font-size="12">Destination</text>
+	<text x="14" y="288.8" fill="#000" font-family="Verdana" font-size="12">Date_decollage</text>
+	<text x="14" y="305.8" fill="#000" font-family="Verdana" font-size="12">date_atterrissage</text>
+	<text x="14" y="322.8" fill="#000" font-family="Verdana" font-size="12">Nb_passagers</text>
+</g>
+
+<!-- Entity Passager -->
+<g>
+	<g>
+		<rect x="285" y="221" width="66" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="285" y="246" width="66" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="285" y="221" width="66" height="84" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="285" y1="246" x2="351" y2="246" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="291" y="238.75" fill="#000" font-family="Verdana" font-size="12">Passager</text>
+	<text x="290" y="263.8" fill="#000" font-family="Verdana" font-size="12">ID</text>
+	<line x1="290" y1="266" x2="305" y2="266" stroke="#000" stroke-width="1"/>
+	<text x="290" y="280.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+	<text x="290" y="297.8" fill="#000" font-family="Verdana" font-size="12">Prenom</text>
+</g>
+</svg>

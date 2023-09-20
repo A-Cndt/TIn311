@@ -20,7 +20,7 @@
 		</div>
 		Pour chacun des exercices ci-dessous, donner le <strong>Modèle Conceptuel de Données</strong> (MCD) puis le <strong>Modèle Logique de Données</strong> (MLD) de la base de données permettant de répondre aux besoins métiers. <br>
 		<br>
-		Commencez par détecter les entités, leurs attributs. Ensuite déterminez les relations et leurs cardinalités. Enfin, transfromez le MCD en MLD en suivant les règles.
+		Commencez par détecter les entités, leurs attributs. Ensuite déterminez les relations et leurs cardinalités. Enfin, transformez le MCD en MLD en suivant les règles.
 		<div class="exercices">
 			<div class="ex1">
 				<h2 class="title">Exercice 1 - Société Aéroportuaire</h2>
@@ -49,16 +49,86 @@
 			<br/>
 			<div id="hidden1" style="display: none">
 				<h3>MCD</h3>
-				<ul>
-					<li>Une Compagnie peut avoir plusieurs Avions, mais chaque Avion appartient à une seule Compagnie. (1:N)</li>
-					<li>Une Compagnie peut opérer plusieurs Vols, mais chaque Vol est associé à une seule Compagnie. (1:N)</li>
-					<li>Un Vol peut avoir plusieurs Passagers, mais chaque Passager peut être associé à plusieurs Vols. (M:N)</li>
-					<li>Chaque Voyage relie un Passager à un Vol spécifique. (1:1)</li>
-					<li>Chaque Voyage est lié à un seul Passager et à un seul Vol. (1:1)</li>
-				</ul>
-					<img src="../ressources/imgs/mcd1.PNG">
+					<img src="../ressources/imgs/Compagnies_mcd.svg">
 				<h3>MLD</h3>
-					<img src="../ressources/imgs/mld1.png">
+					<img src="../ressources/imgs/Compagnies_mld.svg">
+				<h3>Explications</h3>
+				<html>
+				<style>
+				  #mld .relation { font-variant: small-caps; font-weight: bold }
+				  #mld .primary { text-decoration: underline }
+				  #mld .foreign { font-style: oblique }
+				  #mld .normal { }
+				  #mld strong { font-weight: bold }
+				  #mld i { font-style: italic }
+				  #mld ul { list-style-type:square; margin: 0 0 1em 2em }
+				</style>
+				<div id='mld'>
+				<div>
+				  <details><summary><span class='relation'>Avion</span> (
+					<span title='primary_key (None)' class='primary'>Immatriculation</span>,
+					<span title='normal_attribute (None)' class='normal'>Type</span>,
+					<span title='foreign_key (Compagnie)' class='foreign'>#Numero_unique</span>
+				  )</summary>
+				  <ul>
+					<li>Le champ <i>Immatriculation</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Avion</i>.</li>
+					<li>Le champ <i>Type</i> était déjà un simple attribut de l'entité <i>Avion</i>.</li>
+					<li>Le champ <i>Numero_unique</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Possede</i> à partir de l'entité <i>Compagnie</i> en perdant son caractère identifiant.</li>
+				  </ul></details>
+				</div>
+
+				<div>
+				  <details><summary><span class='relation'>Compagnie</span> (
+					<span title='primary_key (None)' class='primary'>Numero_unique</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>
+				  )</summary>
+				  <ul>
+					<li>Le champ <i>Numero_unique</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Compagnie</i>.</li>
+					<li>Le champ <i>Nom</i> était déjà un simple attribut de l'entité <i>Compagnie</i>.</li>
+				  </ul></details>
+				</div>
+
+				<div>
+				  <details><summary><span class='relation'>Embarquer</span> (
+					<span title='primary_foreign_key (Vol)' class='foreign primary'>#N°Vol</span>,
+					<span title='primary_foreign_key (Passager)' class='foreign primary'>#ID</span>
+				  )</summary>
+				  <ul>
+					<li>Le champ <i>N°Vol</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Vol</i>.</li>
+					<li>Le champ <i>ID</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Passager</i>.</li>
+				  </ul></details>
+				</div>
+
+				<div>
+				  <details><summary><span class='relation'>Passager</span> (
+					<span title='primary_key (None)' class='primary'>ID</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>,
+					<span title='normal_attribute (None)' class='normal'>Prenom</span>
+				  )</summary>
+				  <ul>
+					<li>Le champ <i>ID</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Passager</i>.</li>
+					<li>Les champs <i>Nom</i> et <i>Prenom</i> étaient déjà de simples attributs de l'entité <i>Passager</i>.</li>
+				  </ul></details>
+				</div>
+
+				<div>
+				  <details><summary><span class='relation'>Vol</span> (
+					<span title='primary_key (None)' class='primary'>N°Vol</span>,
+					<span title='normal_attribute (None)' class='normal'>Ville_depart</span>,
+					<span title='normal_attribute (None)' class='normal'>Destination</span>,
+					<span title='normal_attribute (None)' class='normal'>Date_decollage</span>,
+					<span title='normal_attribute (None)' class='normal'>date_atterrissage</span>,
+					<span title='normal_attribute (None)' class='normal'>Nb_passagers</span>,
+					<span title='foreign_key (Compagnie)' class='foreign'>#Numero_unique</span>
+				  )</summary>
+				  <ul>
+					<li>Le champ <i>N°Vol</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Vol</i>.</li>
+					<li>Les champs <i>Ville_depart</i>, <i>Destination</i>, <i>Date_decollage</i>, <i>date_atterrissage</i> et <i>Nb_passagers</i> étaient déjà de simples attributs de l'entité <i>Vol</i>.</li>
+					<li>Le champ <i>Numero_unique</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Opere</i> à partir de l'entité <i>Compagnie</i> en perdant son caractère identifiant.</li>
+				  </ul></details>
+				</div>
+
+				</div>
 			</div>
 		</div>
 		
@@ -87,9 +157,114 @@
 			<br/>
 			<div id="hidden2" style="display: none">
 				<h3>MCD</h3>
-					<img src="../ressources/imgs/mcd2.PNG">
+					<img src="../ressources/imgs/Satellite_mcd.svg">
 				<h3>MLD</h3>
-					<img src="../ressources/imgs/mld2.png">
+					<img src="../ressources/imgs/Satellite_mld.svg">
+				<h3>Explications</h3>
+					<style>
+					  #mld .relation { font-variant: small-caps; font-weight: bold }
+					  #mld .primary { text-decoration: underline }
+					  #mld .foreign { font-style: oblique }
+					  #mld .normal { }
+					  #mld strong { font-weight: bold }
+					  #mld i { font-style: italic }
+					  #mld ul { list-style-type:square; margin: 0 0 1em 2em }
+					</style>
+
+					<div id='mld'>
+					<div>
+					  <details><summary><span class='relation'>Categorie</span> (
+						<span title='primary_key (None)' class='primary'>ID_Categorie</span>,
+						<span title='normal_attribute (None)' class='normal'>Gamme_masse</span>,
+						<span title='normal_attribute (None)' class='normal'>Gamme_Puissance</span>,
+						<span title='normal_attribute (None)' class='normal'>Gamme_Duree_VIe</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Categorie</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Categorie</i>.</li>
+						<li>Les champs <i>Gamme_masse</i>, <i>Gamme_Puissance</i> et <i>Gamme_Duree_VIe</i> étaient déjà de simples attributs de l'entité <i>Categorie</i>.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Commande/Achete</span> (
+						<span title='primary_foreign_key (Pays)' class='foreign primary'>#ID_Pays</span>,
+						<span title='primary_foreign_key (Satellite)' class='foreign primary'>#NORAD</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Pays</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Pays</i>.</li>
+						<li>Le champ <i>NORAD</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Satellite</i>.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Pays</span> (
+						<span title='primary_key (None)' class='primary'>ID_Pays</span>,
+						<span title='normal_attribute (None)' class='normal'>Nom</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Pays</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Pays</i>.</li>
+						<li>Le champ <i>Nom</i> était déjà un simple attribut de l'entité <i>Pays</i>.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Produit</span> (
+						<span title='primary_foreign_key (Pays)' class='foreign primary'>#ID_Pays</span>,
+						<span title='primary_foreign_key (Satellite)' class='foreign primary'>#NORAD</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Pays</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Pays</i>.</li>
+						<li>Le champ <i>NORAD</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Satellite</i>.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Satellite</span> (
+						<span title='primary_key (None)' class='primary'>NORAD</span>,
+						<span title='normal_attribute (None)' class='normal'>Nom</span>,
+						<span title='foreign_key (Categorie)' class='foreign'>#ID_Categorie</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>NORAD</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Satellite</i>.</li>
+						<li>Le champ <i>Nom</i> était déjà un simple attribut de l'entité <i>Satellite</i>.</li>
+						<li>Le champ <i>ID_Categorie</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Appartient</i> à partir de l'entité <i>Categorie</i> en perdant son caractère identifiant.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Type</span> (
+						<span title='primary_key (None)' class='primary'>ID_Type</span>,
+						<span title='normal_attribute (None)' class='normal'>Description</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Type</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Type</i>.</li>
+						<li>Le champ <i>Description</i> était déjà un simple attribut de l'entité <i>Type</i>.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Utilise</span> (
+						<span title='primary_foreign_key (Pays)' class='foreign primary'>#ID_Pays</span>,
+						<span title='primary_foreign_key (Satellite)' class='foreign primary'>#NORAD</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Pays</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Pays</i>.</li>
+						<li>Le champ <i>NORAD</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Satellite</i>.</li>
+					  </ul></details>
+					</div>
+
+					<div>
+					  <details><summary><span class='relation'>Utiliser pour</span> (
+						<span title='primary_foreign_key (Categorie)' class='foreign primary'>#ID_Categorie</span>,
+						<span title='primary_foreign_key (Type)' class='foreign primary'>#ID_Type</span>
+					  )</summary>
+					  <ul>
+						<li>Le champ <i>ID_Categorie</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Categorie</i>.</li>
+						<li>Le champ <i>ID_Type</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Type</i>.</li>
+					  </ul></details>
+					</div>
+
+					</div>
 			</div>
 		</div>
 		

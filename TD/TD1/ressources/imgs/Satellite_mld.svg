@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="672" height="407" viewBox="0 0 672 407" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="672" height="407" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Entity Produit -->
+<g>
+	<g>
+		<rect x="194" y="9" width="72" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="194" y="34" width="72" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="194" y="9" width="72" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="194" y1="34" x2="266" y2="34" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="208" y="26.75" fill="#000" font-family="Verdana" font-size="12">Produit</text>
+	<text x="199" y="51.8" fill="#000" font-family="Verdana" font-size="12">#ID_Pays</text>
+	<line x1="199" y1="54" x2="260" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="199" y="68.8" fill="#000" font-family="Verdana" font-size="12">#NORAD</text>
+	<line x1="199" y1="71" x2="254" y2="71" stroke="#000" stroke-width="1"/>
+</g>
+
+<!-- Entity Pays -->
+<g>
+	<g>
+		<rect x="41" y="102" width="62" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="41" y="127" width="62" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="41" y="102" width="62" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="41" y1="127" x2="103" y2="127" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="58" y="119.75" fill="#000" font-family="Verdana" font-size="12">Pays</text>
+	<text x="46" y="144.8" fill="#000" font-family="Verdana" font-size="12">ID_Pays</text>
+	<line x1="46" y1="147" x2="97" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="46" y="161.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+</g>
+
+<!-- Entity Commande/Achete -->
+<g>
+	<g>
+		<rect x="167" y="102" width="126" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="167" y="127" width="126" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="167" y="102" width="126" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="167" y1="127" x2="293" y2="127" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="172" y="119.75" fill="#000" font-family="Verdana" font-size="12">Commande/Achete</text>
+	<text x="172" y="144.8" fill="#000" font-family="Verdana" font-size="12">#ID_Pays</text>
+	<line x1="172" y1="147" x2="233" y2="147" stroke="#000" stroke-width="1"/>
+	<text x="172" y="161.8" fill="#000" font-family="Verdana" font-size="12">#NORAD</text>
+	<line x1="172" y1="164" x2="227" y2="164" stroke="#000" stroke-width="1"/>
+</g>
+
+<!-- Entity Satellite -->
+<g>
+	<g>
+		<rect x="371" y="94" width="102" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="371" y="119" width="102" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="371" y="94" width="102" height="84" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="371" y1="119" x2="473" y2="119" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="397" y="111.75" fill="#000" font-family="Verdana" font-size="12">Satellite</text>
+	<text x="376" y="136.8" fill="#000" font-family="Verdana" font-size="12">NORAD</text>
+	<line x1="376" y1="139" x2="421" y2="139" stroke="#000" stroke-width="1"/>
+	<text x="376" y="153.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+	<text x="376" y="170.8" fill="#000" font-family="Verdana" font-size="12">#ID_Categorie</text>
+</g>
+
+<!-- Entity Utilise -->
+<g>
+	<g>
+		<rect x="194" y="220" width="72" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="194" y="245" width="72" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="194" y="220" width="72" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="194" y1="245" x2="266" y2="245" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="211" y="237.75" fill="#000" font-family="Verdana" font-size="12">Utilise</text>
+	<text x="199" y="262.8" fill="#000" font-family="Verdana" font-size="12">#ID_Pays</text>
+	<line x1="199" y1="265" x2="260" y2="265" stroke="#000" stroke-width="1"/>
+	<text x="199" y="279.8" fill="#000" font-family="Verdana" font-size="12">#NORAD</text>
+	<line x1="199" y1="282" x2="254" y2="282" stroke="#000" stroke-width="1"/>
+</g>
+
+<!-- Entity Categorie -->
+<g>
+	<g>
+		<rect x="357" y="203" width="130" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="357" y="228" width="130" height="77" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="357" y="203" width="130" height="102" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="357" y1="228" x2="487" y2="228" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="393" y="220.75" fill="#000" font-family="Verdana" font-size="12">Categorie</text>
+	<text x="362" y="245.8" fill="#000" font-family="Verdana" font-size="12">ID_Categorie</text>
+	<line x1="362" y1="248" x2="443" y2="248" stroke="#000" stroke-width="1"/>
+	<text x="362" y="262.8" fill="#000" font-family="Verdana" font-size="12">Gamme_masse</text>
+	<text x="362" y="279.8" fill="#000" font-family="Verdana" font-size="12">Gamme_Puissance</text>
+	<text x="362" y="296.8" fill="#000" font-family="Verdana" font-size="12">Gamme_Duree_VIe</text>
+</g>
+
+<!-- Entity Utiliser pour -->
+<g>
+	<g>
+		<rect x="371" y="330" width="102" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="371" y="355" width="102" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="371" y="330" width="102" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="371" y1="355" x2="473" y2="355" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="385" y="347.75" fill="#000" font-family="Verdana" font-size="12">Utiliser pour</text>
+	<text x="376" y="372.8" fill="#000" font-family="Verdana" font-size="12">#ID_Categorie</text>
+	<line x1="376" y1="375" x2="467" y2="375" stroke="#000" stroke-width="1"/>
+	<text x="376" y="389.8" fill="#000" font-family="Verdana" font-size="12">#ID_Type</text>
+	<line x1="376" y1="392" x2="438" y2="392" stroke="#000" stroke-width="1"/>
+</g>
+
+<!-- Entity Type -->
+<g>
+	<g>
+		<rect x="551" y="330" width="80" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="551" y="355" width="80" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="551" y="330" width="80" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="551" y1="355" x2="631" y2="355" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="576" y="347.75" fill="#000" font-family="Verdana" font-size="12">Type</text>
+	<text x="556" y="372.8" fill="#000" font-family="Verdana" font-size="12">ID_Type</text>
+	<line x1="556" y1="375" x2="608" y2="375" stroke="#000" stroke-width="1"/>
+	<text x="556" y="389.8" fill="#000" font-family="Verdana" font-size="12">Description</text>
+</g>
+
+<!-- Link from &quot;ID_Pays&quot; (Produit) to &quot;ID_Pays&quot; (Pays) -->
+<path d="M194 47.5 C148.5 94 163.67 140.5 103 140.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="103 140.5 115 134.5 111 140.5 115 146.5" fill="#e08214" stroke-width="0"/>
+<circle cx="194" cy="47.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;NORAD&quot; (Produit) to &quot;NORAD&quot; (Satellite) -->
+<path d="M266 64.5 C318.5 98.5 301 132.5 371 132.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="371 132.5 359 138.5 363 132.5 359 126.5" fill="#e08214" stroke-width="0"/>
+<circle cx="266" cy="64.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;ID_Pays&quot; (Commande/Achete) to &quot;ID_Pays&quot; (Pays) -->
+<path d="M167 140.5 C135 140.5 145.67 140.5 103 140.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="103 140.5 115 134.5 111 140.5 115 146.5" fill="#e08214" stroke-width="0"/>
+<circle cx="167" cy="140.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;NORAD&quot; (Commande/Achete) to &quot;NORAD&quot; (Satellite) -->
+<path d="M293 157.5 C332 145 319 132.5 371 132.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="371 132.5 359 138.5 363 132.5 359 126.5" fill="#e08214" stroke-width="0"/>
+<circle cx="293" cy="157.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;ID_Categorie&quot; (Satellite) to &quot;ID_Categorie&quot; (Categorie) -->
+<path d="M473 166.5 C527 204 541 241.5 487 241.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="487 241.5 499 235.5 495 241.5 499 247.5" fill="#e08214" stroke-width="0"/>
+<circle cx="473" cy="166.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;ID_Pays&quot; (Utilise) to &quot;ID_Pays&quot; (Pays) -->
+<path d="M194 258.5 C148.5 199.5 163.67 140.5 103 140.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="103 140.5 115 134.5 111 140.5 115 146.5" fill="#e08214" stroke-width="0"/>
+<circle cx="194" cy="258.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;NORAD&quot; (Utilise) to &quot;NORAD&quot; (Satellite) -->
+<path d="M266 275.5 C318.5 204 301 132.5 371 132.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="371 132.5 359 138.5 363 132.5 359 126.5" fill="#e08214" stroke-width="0"/>
+<circle cx="266" cy="275.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;ID_Categorie&quot; (Utiliser pour) to &quot;ID_Categorie&quot; (Categorie) -->
+<path d="M473 368.5 C527 305 541 241.5 487 241.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="487 241.5 499 235.5 495 241.5 499 247.5" fill="#e08214" stroke-width="0"/>
+<circle cx="473" cy="368.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+
+<!-- Link from &quot;ID_Type&quot; (Utiliser pour) to &quot;ID_Type&quot; (Type) -->
+<path d="M473 385.5 C512 377 499 368.5 551 368.5" fill="none" stroke="#e08214" stroke-width="2"/>
+<polygon points="551 368.5 539 374.5 543 368.5 539 362.5" fill="#e08214" stroke-width="0"/>
+<circle cx="473" cy="385.5" r="2" stroke="#e08214" stroke-width="2" fill="#e08214"/>
+</svg>

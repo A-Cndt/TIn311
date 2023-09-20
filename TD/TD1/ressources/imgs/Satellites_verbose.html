@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+  #mld strong { font-weight: bold }
+  #mld i { font-style: italic }
+  #mld ul { list-style-type:square; margin: 0 0 1em 2em }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <details><summary><span class='relation'>Categorie</span> (
+    <span title='primary_key (None)' class='primary'>ID_Categorie</span>,
+    <span title='normal_attribute (None)' class='normal'>Gamme_masse</span>,
+    <span title='normal_attribute (None)' class='normal'>Gamme_Puissance</span>,
+    <span title='normal_attribute (None)' class='normal'>Gamme_Duree_VIe</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Categorie</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Categorie</i>.</li>
+    <li>Les champs <i>Gamme_masse</i>, <i>Gamme_Puissance</i> et <i>Gamme_Duree_VIe</i> étaient déjà de simples attributs de l'entité <i>Categorie</i>.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Commande/Achete</span> (
+    <span title='primary_foreign_key (Pays)' class='foreign primary'>#ID_Pays</span>,
+    <span title='primary_foreign_key (Satellite)' class='foreign primary'>#NORAD</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Pays</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Pays</i>.</li>
+    <li>Le champ <i>NORAD</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Satellite</i>.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Pays</span> (
+    <span title='primary_key (None)' class='primary'>ID_Pays</span>,
+    <span title='normal_attribute (None)' class='normal'>Nom</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Pays</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Pays</i>.</li>
+    <li>Le champ <i>Nom</i> était déjà un simple attribut de l'entité <i>Pays</i>.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Produit</span> (
+    <span title='primary_foreign_key (Pays)' class='foreign primary'>#ID_Pays</span>,
+    <span title='primary_foreign_key (Satellite)' class='foreign primary'>#NORAD</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Pays</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Pays</i>.</li>
+    <li>Le champ <i>NORAD</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Satellite</i>.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Satellite</span> (
+    <span title='primary_key (None)' class='primary'>NORAD</span>,
+    <span title='normal_attribute (None)' class='normal'>Nom</span>,
+    <span title='foreign_key (Categorie)' class='foreign'>#ID_Categorie</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>NORAD</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Satellite</i>.</li>
+    <li>Le champ <i>Nom</i> était déjà un simple attribut de l'entité <i>Satellite</i>.</li>
+    <li>Le champ <i>ID_Categorie</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Appartient</i> à partir de l'entité <i>Categorie</i> en perdant son caractère identifiant.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Type</span> (
+    <span title='primary_key (None)' class='primary'>ID_Type</span>,
+    <span title='normal_attribute (None)' class='normal'>Description</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Type</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Type</i>.</li>
+    <li>Le champ <i>Description</i> était déjà un simple attribut de l'entité <i>Type</i>.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Utilise</span> (
+    <span title='primary_foreign_key (Pays)' class='foreign primary'>#ID_Pays</span>,
+    <span title='primary_foreign_key (Satellite)' class='foreign primary'>#NORAD</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Pays</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Pays</i>.</li>
+    <li>Le champ <i>NORAD</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Satellite</i>.</li>
+  </ul></details>
+</div>
+
+<div>
+  <details><summary><span class='relation'>Utiliser pour</span> (
+    <span title='primary_foreign_key (Categorie)' class='foreign primary'>#ID_Categorie</span>,
+    <span title='primary_foreign_key (Type)' class='foreign primary'>#ID_Type</span>
+  )</summary>
+  <ul>
+    <li>Le champ <i>ID_Categorie</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Categorie</i>.</li>
+    <li>Le champ <i>ID_Type</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Type</i>.</li>
+  </ul></details>
+</div>
+
+</div>
+</body>
+</html>

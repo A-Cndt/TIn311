@@ -40,14 +40,13 @@ body {
 }
 
 .correction {
-	page-break-before: always;
 	color: red;
 }
 
 .logo_ipsa {
 	z-index: -1;
-	position: absolute;
+	position:fixed;
 	right: 0;
 	top: 25pt;
-	height: 8%;
+	height: 15%;
 }
