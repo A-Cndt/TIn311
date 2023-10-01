@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>TIn 311 - TD 2</title>
+		<meta charset="utf-8">
+		<meta lang="fr-FR">
+		<link rel="stylesheet" href="../ressources/css/td.css">
+		<script src="../ressources/js/td.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		<div class="header">
+			<hr>
+			<h1 class="title">TD 2 - Réalisation de MCD & MLD - 2</h1>
+			<p class="details">TIn 311 - Initiation aux bases de données</p>
+			<p class="author">Alexandre CONDETTE - <a class="email" href="mailto:alexandre.condette@cnes.fr">alexandre.condette@cnes.fr</a></p>
+			<p class="year">2023 - 2024</p>
+			<img class="logo_ipsa" src="../ressources/imgs/logo_ipsa.png">
+			<hr>
+		</div>
+		
+		<div class="exercices">
+			<div class="ex1">
+				<h2 class="title">Exercice 1 : Réseau Mobile</h2>
+				
+				Une entreprise de télécommunications souhaite concevoir une base de données pour gérer son réseau mobile.
+				<br/>
+				<br/>
+				Le réseau mobile est composé de plusieurs éléments, notamment des stations, des abonnées, des appels, des messages.
+				<br/>
+				Les stations sont réparties dans différentes régions géographiques. Chaque abonné possède un numéro de téléphone unique et peut effectuer des appel, envoyer des messages avec son forfait.
+				<br/>
+				<br/>
+				Les stations enregistrent les informations sur les appels passés. Chaque appel peut-être entrant ou sortant et a une durée associée.
+				<br/>
+				Les messages texte sont également enregistrés avec l'expéditeur, le destinataire et le contenu du message.
+				<br/>
+				<br/>
+				Les abonnées ont des forfaits qui définissent leur allocation de temps d'appel, de messages. Les abonnées ont également la possibilité de changer de forfait.
+				<br/>
+				<br/>
+				Créez le MCD et le MLD pour représenter la gestion de ce réseau.
+			</div>
+		</div>
+		
+		<div class="correction">
+			<h2 class="solve">Correction</h2>
+			<button onclick="seeCorrection(1)" id="ex1">Voir la correction</button>
+			<br/>
+			<div id="hidden1" style="display: none">
+				<h3>MCD</h3>
+				<img src="../ressources/imgs/Forfaits_mcd.svg">
+
+				<h3>MLD</h3>
+				<img src="../ressources/imgs/Forfaits_mld.svg">
+				<style>
+				#mld .relation { font-variant: small-caps; font-weight: bold }
+				#mld .primary { text-decoration: underline }
+				#mld .foreign { font-style: oblique }
+				#mld .normal { }
+				#mld strong { font-weight: bold }
+				#mld i { font-style: italic }
+				#mld ul { list-style-type:square; margin: 0 0 1em 2em }
+				</style>
+				<div id='mld'>
+				<div>
+				<details><summary><span class='relation'>Abonné</span> (
+					<span title='primary_key (None)' class='primary'>Numero_telephone</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>,
+					<span title='normal_attribute (None)' class='normal'>Adresse</span>,
+					<span title='foreign_key (Station)' class='foreign'>#ID_Station</span>,
+					<span title='foreign_key (Forfait)' class='foreign'>#ID_forfait</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>Numero_telephone</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Abonné</i>.</li>
+					<li>Les champs <i>Nom</i> et <i>Adresse</i> étaient déjà de simples attributs de l'entité <i>Abonné</i>.</li>
+					<li>Le champ <i>ID_Station</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Deservir</i> à partir de l'entité <i>Station</i> en perdant son caractère identifiant.</li>
+					<li>Le champ <i>ID_forfait</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Souscrire</i> à partir de l'entité <i>Forfait</i> en perdant son caractère identifiant.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Appeller</span> (
+					<span title='primary_foreign_key (Abonné)' class='foreign primary'>#Numero_telephone</span>,
+					<span title='primary_foreign_key (Abonné)' class='foreign primary'>#Numero_telephone.1</span>,
+					<span title='association_attribute (None)' class='normal'>ID_appel</span>,
+					<span title='association_attribute (None)' class='normal'>Duree</span>
+				)</summary>
+				<ul>
+					<li>Les champs <i>Numero_telephone</i> et <i>Numero_telephone.1</i> constituent la clé primaire de la table. Ce sont des clés étrangères qui ont migré directement à partir de l'entité <i>Abonné</i>.</li>
+					<li>Les champs <i>ID_appel</i> et <i>Duree</i> étaient déjà de simples attributs de l'association <i>Appeller</i>.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Envoyer_msg</span> (
+					<span title='primary_foreign_key (Abonné)' class='foreign primary'>#Numero_telephone</span>,
+					<span title='primary_foreign_key (Abonné)' class='foreign primary'>#Numero_telephone.1</span>,
+					<span title='association_attribute (None)' class='normal'>Contenu</span>,
+					<span title='association_attribute (None)' class='normal'>Date</span>
+				)</summary>
+				<ul>
+					<li>Les champs <i>Numero_telephone</i> et <i>Numero_telephone.1</i> constituent la clé primaire de la table. Ce sont des clés étrangères qui ont migré directement à partir de l'entité <i>Abonné</i>.</li>
+					<li>Les champs <i>Contenu</i> et <i>Date</i> étaient déjà de simples attributs de l'association <i>Envoyer_msg</i>.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Forfait</span> (
+					<span title='primary_key (None)' class='primary'>ID_forfait</span>,
+					<span title='normal_attribute (None)' class='normal'>Minutes_appel</span>,
+					<span title='normal_attribute (None)' class='normal'>Message_inclus</span>,
+					<span title='normal_attribute (None)' class='normal'>Donnes_mobiles</span>,
+					<span title='normal_attribute (None)' class='normal'>Cout</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>ID_forfait</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Forfait</i>.</li>
+					<li>Les champs <i>Minutes_appel</i>, <i>Message_inclus</i>, <i>Donnes_mobiles</i> et <i>Cout</i> étaient déjà de simples attributs de l'entité <i>Forfait</i>.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Station</span> (
+					<span title='primary_key (None)' class='primary'>ID_Station</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>,
+					<span title='normal_attribute (None)' class='normal'>Coordonnées</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>ID_Station</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Station</i>.</li>
+					<li>Les champs <i>Nom</i> et <i>Coordonnées</i> étaient déjà de simples attributs de l'entité <i>Station</i>.</li>
+				</ul></details>
+				</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="exercices">
+			<div class="ex2">
+				<h2 class="title">Exercice 2 : Modules informatiques</h2>
+
+				On souhaite modéliser l'agencement de différents projets informatiques libres écrits en python. Le code de ces projets se compose de différents modules (ex Numpy, Astropy, etc.) nécessaire à son fonctionnement. La plupart des projets utilisent au moins un module.
+				<br/>
+				Un module est une collection de fichiers sources, qui possède un nom, une version, et peut lui-même dépendre de plusieurs autres modules (dépendance).
+				<br/>
+				<br/>
+				Chaque module et chaque projet et publié sous les termes d'une licence (ex. Licence MIT) permettant une utilisation plus ou moins libre. On souhaite représenter dans la base toutes les données relatives à ces licences.
+			</div>
+		</div>
+		
+		<div class="correction">
+			<h2 class="solve">Correction</h2>
+			<button onclick="seeCorrection(2)" id="ex2">Voir la correction</button>
+			<br/>
+			<div id="hidden2" style="display: none">
+				<h3>MCD</h3>
+				<img src="../ressources/imgs/Modules_mcd.svg">
+
+				<h3>MLD</h3>
+				<img src="../ressources/imgs/Modules_mld.svg">
+				<style>
+				#mld .relation { font-variant: small-caps; font-weight: bold }
+				#mld .primary { text-decoration: underline }
+				#mld .foreign { font-style: oblique }
+				#mld .normal { }
+				#mld strong { font-weight: bold }
+				#mld i { font-style: italic }
+				#mld ul { list-style-type:square; margin: 0 0 1em 2em }
+				</style>
+				<div id='mld'>
+				<div>
+				<details><summary><span class='relation'>Composer</span> (
+					<span title='primary_foreign_key (Projet)' class='foreign primary'>#ID_Projet</span>,
+					<span title='primary_foreign_key (Module)' class='foreign primary'>#ID_module</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>ID_Projet</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Projet</i>.</li>
+					<li>Le champ <i>ID_module</i> fait partie de la clé primaire de la table. C'est une clé étrangère qui a migré directement à partir de l'entité <i>Module</i>.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Depend</span> (
+					<span title='primary_foreign_key (Module)' class='foreign primary'>#ID_module</span>,
+					<span title='primary_foreign_key (Module)' class='foreign primary'>#ID_module.1</span>
+				)</summary>
+				<ul>
+					<li>Les champs <i>ID_module</i> et <i>ID_module.1</i> constituent la clé primaire de la table. Ce sont des clés étrangères qui ont migré directement à partir de l'entité <i>Module</i>.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Licence</span> (
+					<span title='primary_key (None)' class='primary'>N°Licence</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>N°Licence</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Licence</i>.</li>
+					<li>Le champ <i>Nom</i> était déjà un simple attribut de l'entité <i>Licence</i>.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Module</span> (
+					<span title='primary_key (None)' class='primary'>ID_module</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>,
+					<span title='normal_attribute (None)' class='normal'>Version</span>,
+					<span title='foreign_key (Licence)' class='foreign'>#N°Licence</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>ID_module</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Module</i>.</li>
+					<li>Les champs <i>Nom</i> et <i>Version</i> étaient déjà de simples attributs de l'entité <i>Module</i>.</li>
+					<li>Le champ <i>N°Licence</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Publier Module</i> à partir de l'entité <i>Licence</i> en perdant son caractère identifiant.</li>
+				</ul></details>
+				</div>
+
+				<div>
+				<details><summary><span class='relation'>Projet</span> (
+					<span title='primary_key (None)' class='primary'>ID_Projet</span>,
+					<span title='normal_attribute (None)' class='normal'>Nom</span>,
+					<span title='normal_attribute (None)' class='normal'>Date_de creation</span>,
+					<span title='foreign_key (Licence)' class='foreign'>#N°Licence</span>
+				)</summary>
+				<ul>
+					<li>Le champ <i>ID_Projet</i> constitue la clé primaire de la table. C'était déjà un identifiant de l'entité <i>Projet</i>.</li>
+					<li>Les champs <i>Nom</i> et <i>Date_de creation</i> étaient déjà de simples attributs de l'entité <i>Projet</i>.</li>
+					<li>Le champ <i>N°Licence</i> est une clé étrangère. Il a migré par l'association de dépendance fonctionnelle <i>Publier Projet</i> à partir de l'entité <i>Licence</i> en perdant son caractère identifiant.</li>
+				</ul></details>
+				</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<hr>
+			<ul class="footer_list">
+				<li id="details">TIn 311 - Initiation aux bases de données</li>
+				<li id="td_nb">TD 2</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

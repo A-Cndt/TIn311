@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="376" height="261" viewBox="0 0 376 261" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="376" height="261" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association Publier Module -->
+<g>
+	<line x1="61" y1="135" x2="61" y2="43" stroke="#e08214" stroke-width="2"/>
+	<text x="66" y="85" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="181" y1="43" x2="61" y2="43" stroke="#e08214" stroke-width="2"/>
+	<text x="118" y="60" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M99 18 a14 14 90 0 1 14 14 V43 h-104 V32 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M113 43 v11 a14 14 90 0 1 -14 14 H23 a14 14 90 0 1 -14 -14 V43 H104" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="9" y="18" width="104" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="9" y1="43" x2="113" y2="43" stroke="#e08214" stroke-width="1"/>
+		<text x="17" y="35.75" fill="#000" font-family="Verdana" font-size="12">Publier Module</text>
+	</g>
+</g>
+
+<!-- Association Publier Projet -->
+<g>
+	<line x1="309" y1="135" x2="309" y2="43" stroke="#e08214" stroke-width="2"/>
+	<text x="314" y="85" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="181" y1="43" x2="309" y2="43" stroke="#e08214" stroke-width="2"/>
+	<text x="222" y="60" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M343 18 a14 14 90 0 1 14 14 V43 h-96 V32 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M357 43 v11 a14 14 90 0 1 -14 14 H275 a14 14 90 0 1 -14 -14 V43 H96" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="261" y="18" width="96" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="261" y1="43" x2="357" y2="43" stroke="#e08214" stroke-width="1"/>
+		<text x="268" y="35.75" fill="#000" font-family="Verdana" font-size="12">Publier Projet</text>
+	</g>
+</g>
+
+<!-- Association Composer -->
+<g>
+	<line x1="309" y1="135" x2="181" y2="135" stroke="#e08214" stroke-width="2"/>
+	<text x="224" y="152" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+	<line x1="61" y1="135" x2="181" y2="135" stroke="#e08214" stroke-width="2"/>
+	<text x="105" y="152" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M205 110 a14 14 90 0 1 14 14 V135 h-76 V124 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M219 135 v11 a14 14 90 0 1 -14 14 H157 a14 14 90 0 1 -14 -14 V135 H76" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="143" y="110" width="76" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="143" y1="135" x2="219" y2="135" stroke="#e08214" stroke-width="1"/>
+		<text x="150" y="127.75" fill="#000" font-family="Verdana" font-size="12">Composer</text>
+	</g>
+</g>
+
+<!-- Association Depend -->
+<g>
+	<path d="M61 135 C103.67 177 103.67 207.67 61 227" fill="none" stroke="#e08214" stroke-width="2"/>
+	<text x="63" y="194" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+	<path d="M61 135 C18.33 177 18.33 207.67 61 227" fill="none" stroke="#e08214" stroke-width="2"/>
+	<text x="37" y="194" fill="#542788" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M78 202 a14 14 90 0 1 14 14 V227 h-62 V216 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M92 227 v11 a14 14 90 0 1 -14 14 H44 a14 14 90 0 1 -14 -14 V227 H62" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="30" y="202" width="62" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="30" y1="227" x2="92" y2="227" stroke="#e08214" stroke-width="1"/>
+		<text x="38" y="219.75" fill="#000" font-family="Verdana" font-size="12">Depend</text>
+	</g>
+</g>
+
+<!-- Entity Licence -->
+<g>
+	<g>
+		<rect x="145" y="9" width="72" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="145" y="34" width="72" height="43" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="145" y="9" width="72" height="68" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="145" y1="34" x2="217" y2="34" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="159" y="26.75" fill="#000" font-family="Verdana" font-size="12">Licence</text>
+	<text x="150" y="51.8" fill="#000" font-family="Verdana" font-size="12">N°Licence</text>
+	<line x1="150" y1="54" x2="211" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="150" y="68.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+</g>
+
+<!-- Entity Module -->
+<g>
+	<g>
+		<rect x="22" y="93" width="78" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="22" y="118" width="78" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="22" y="93" width="78" height="84" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="22" y1="118" x2="100" y2="118" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="39" y="110.75" fill="#000" font-family="Verdana" font-size="12">Module</text>
+	<text x="27" y="135.8" fill="#000" font-family="Verdana" font-size="12">ID_module</text>
+	<line x1="27" y1="138" x2="94" y2="138" stroke="#000" stroke-width="1"/>
+	<text x="27" y="152.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+	<text x="27" y="169.8" fill="#000" font-family="Verdana" font-size="12">Version</text>
+</g>
+
+<!-- Entity Projet -->
+<g>
+	<g>
+		<rect x="251" y="93" width="116" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="251" y="118" width="116" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="251" y="93" width="116" height="84" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="251" y1="118" x2="367" y2="118" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="291" y="110.75" fill="#000" font-family="Verdana" font-size="12">Projet</text>
+	<text x="256" y="135.8" fill="#000" font-family="Verdana" font-size="12">ID_Projet</text>
+	<line x1="256" y1="138" x2="315" y2="138" stroke="#000" stroke-width="1"/>
+	<text x="256" y="152.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+	<text x="256" y="169.8" fill="#000" font-family="Verdana" font-size="12">Date_de creation</text>
+</g>
+</svg>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="379" height="338" viewBox="0 0 379 338" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="379" height="338" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association Deservir -->
+<g>
+	<line x1="325" y1="68" x2="195" y2="68" stroke="#e08214" stroke-width="2"/>
+	<text x="253" y="85" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<line x1="195" y1="194" x2="195" y2="68" stroke="#e08214" stroke-width="2"/>
+	<text x="200" y="144" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<g>
+		<path d="M214 43 a14 14 90 0 1 14 14 V68 h-66 V57 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M228 68 v11 a14 14 90 0 1 -14 14 H176 a14 14 90 0 1 -14 -14 V68 H66" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="162" y="43" width="66" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="162" y1="68" x2="228" y2="68" stroke="#e08214" stroke-width="1"/>
+		<text x="170" y="60.75" fill="#000" font-family="Verdana" font-size="12">Deservir</text>
+	</g>
+</g>
+
+<!-- Association Souscrire -->
+<g>
+	<line x1="195" y1="194" x2="64" y2="194" stroke="#e08214" stroke-width="2"/>
+	<text x="106" y="211" fill="#542788" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="64" y1="68" x2="64" y2="194" stroke="#e08214" stroke-width="2"/>
+	<text x="69" y="144" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M86 169 a14 14 90 0 1 14 14 V194 h-72 V183 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M100 194 v11 a14 14 90 0 1 -14 14 H42 a14 14 90 0 1 -14 -14 V194 H72" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="28" y="169" width="72" height="50" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="28" y1="194" x2="100" y2="194" stroke="#e08214" stroke-width="1"/>
+		<text x="36" y="186.75" fill="#000" font-family="Verdana" font-size="12">Souscrire</text>
+	</g>
+</g>
+
+<!-- Association Appeller -->
+<g>
+	<path d="M195 194 C257 160.67 300.33 160.67 325 194" fill="none" stroke="#e08214" stroke-width="2"/>
+	<text x="263" y="188" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<path d="M195 194 C257 227.33 300.33 227.33 325 194" fill="none" stroke="#e08214" stroke-width="2"/>
+	<text x="263" y="209" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M346 160 a14 14 90 0 1 14 14 V185 h-70 V174 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M360 185 v29 a14 14 90 0 1 -14 14 H304 a14 14 90 0 1 -14 -14 V185 H70" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="290" y="160" width="70" height="68" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="290" y1="185" x2="360" y2="185" stroke="#e08214" stroke-width="1"/>
+		<text x="300" y="177.75" fill="#000" font-family="Verdana" font-size="12">Appeller</text>
+		<text x="297" y="202.8" fill="#000" font-family="Verdana" font-size="12">ID_appel</text>
+		<text x="297" y="219.8" fill="#000" font-family="Verdana" font-size="12">Duree</text>
+	</g>
+</g>
+
+<!-- Association Envoyer_msg -->
+<g>
+	<path d="M195 194 C237.67 233 237.67 266.67 195 295" fill="none" stroke="#e08214" stroke-width="2"/>
+	<text x="198" y="253" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<path d="M195 194 C152.33 233 152.33 266.67 195 295" fill="none" stroke="#e08214" stroke-width="2"/>
+	<text x="170" y="253" fill="#542788" font-family="Verdana" font-size="12">1,N</text>
+	<g>
+		<path d="M230 261 a14 14 90 0 1 14 14 V286 h-98 V275 a14 14 90 0 1 14 -14" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<path d="M244 286 v29 a14 14 90 0 1 -14 14 H160 a14 14 90 0 1 -14 -14 V286 H98" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="146" y="261" width="98" height="68" fill="none" rx="14" stroke="#e08214" stroke-width="2"/>
+		<line x1="146" y1="286" x2="244" y2="286" stroke="#e08214" stroke-width="1"/>
+		<text x="154" y="278.75" fill="#000" font-family="Verdana" font-size="12">Envoyer_msg</text>
+		<text x="153" y="303.8" fill="#000" font-family="Verdana" font-size="12">Contenu</text>
+		<text x="153" y="320.8" fill="#000" font-family="Verdana" font-size="12">Date</text>
+	</g>
+</g>
+
+<!-- Entity Forfait -->
+<g>
+	<g>
+		<rect x="9" y="9" width="110" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="9" y="34" width="110" height="93" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="9" y="9" width="110" height="118" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="9" y1="34" x2="119" y2="34" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="44" y="26.75" fill="#000" font-family="Verdana" font-size="12">Forfait</text>
+	<text x="14" y="51.8" fill="#000" font-family="Verdana" font-size="12">ID_forfait</text>
+	<line x1="14" y1="54" x2="73" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="14" y="68.8" fill="#000" font-family="Verdana" font-size="12">Minutes_appel</text>
+	<text x="14" y="85.8" fill="#000" font-family="Verdana" font-size="12">Message_inclus</text>
+	<text x="14" y="102.8" fill="#000" font-family="Verdana" font-size="12">Donnes_mobiles</text>
+	<text x="14" y="119.8" fill="#000" font-family="Verdana" font-size="12">Cout</text>
+</g>
+
+<!-- Entity Station -->
+<g>
+	<g>
+		<rect x="280" y="26" width="90" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="280" y="51" width="90" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="280" y="26" width="90" height="84" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="280" y1="51" x2="370" y2="51" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="303" y="43.75" fill="#000" font-family="Verdana" font-size="12">Station</text>
+	<text x="285" y="68.8" fill="#000" font-family="Verdana" font-size="12">ID_Station</text>
+	<line x1="285" y1="71" x2="351" y2="71" stroke="#000" stroke-width="1"/>
+	<text x="285" y="85.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+	<text x="285" y="102.8" fill="#000" font-family="Verdana" font-size="12">Coordonnées</text>
+</g>
+
+<!-- Entity Abonné -->
+<g>
+	<g>
+		<rect x="132" y="152" width="126" height="25" fill="#b2abd2" stroke="#b2abd2" stroke-width="0" opacity="1"/>
+		<rect x="132" y="177" width="126" height="59" fill="#d8daeb" stroke="#d8daeb" stroke-width="0" opacity="1"/>
+		<rect x="132" y="152" width="126" height="84" fill="none" stroke="#8073ac" stroke-width="2" opacity="1"/>
+		<line x1="132" y1="177" x2="258" y2="177" stroke="#8073ac" stroke-width="1"/>
+	</g>
+	<text x="172" y="169.75" fill="#000" font-family="Verdana" font-size="12">Abonné</text>
+	<text x="137" y="194.8" fill="#000" font-family="Verdana" font-size="12">Numero_telephone</text>
+	<line x1="137" y1="197" x2="253" y2="197" stroke="#000" stroke-width="1"/>
+	<text x="137" y="211.8" fill="#000" font-family="Verdana" font-size="12">Nom</text>
+	<text x="137" y="228.8" fill="#000" font-family="Verdana" font-size="12">Adresse</text>
+</g>
+</svg>
